@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Intelligence Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo">
+        Store Intelligence
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Dashboard
+        </a>
+
+        
+
+        <a href="upload.html">Upload CCTV</a>
+
+        <a href="http://127.0.0.1:8000/docs" target="_blank">
+            API Docs
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="header">
+<h1>Store Intelligence Platform</h1>
+
+<p class="subtitle">
+    AI-Powered Retail Analytics & Customer Intelligence
+</p>
+
+<div class="status-bar">
+
+    <span class="status-online">
+        🟢 System Online
+    </span>
+
+    <span id="lastUpdated">
+    </span>
+
+</div>
+</div>
+
+<div id="summary"></div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="charts-row">
+
+    <div class="card chart-card">
+        <h2>Revenue By Brand</h2>
+        <canvas id="brandChart"></canvas>
+    </div>
+
+    <div class="card chart-card">
+        <h2>Zone Visits</h2>
+        <canvas id="zoneChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>Customer Journeys</h2>
+        <div id="journeys"></div>
+    </div>
+
+    <div class="card chart-card">
+    <h2>Store Heatmap</h2>
+
+    <img
+        id="heatmap"
+        src="http://127.0.0.1:8000/api/heatmap"
+        width="100%"
+    >
+</div>
+
+<div class="card">
+    <h2>Customer Funnel</h2>
+
+    <div id="funnel-container">
+        Loading...
+    </div>
+</div>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

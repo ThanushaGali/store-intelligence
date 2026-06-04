@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload CCTV Video</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.upload-container{
+    max-width:900px;
+    margin:50px auto;
+}
+
+.upload-card{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    border-top:5px solid #4f46e5;
+}
+
+.upload-card h1{
+    margin-bottom:10px;
+    font-size:42px;
+}
+
+.upload-card p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.file-input{
+    margin:20px 0;
+}
+
+.file-input input{
+    padding:10px;
+}
+
+.process-btn{
+    background:#4f46e5;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.process-btn:hover{
+    background:#3730a3;
+}
+
+.video-preview{
+    margin-top:30px;
+}
+
+.video-preview video{
+    width:100%;
+    max-width:700px;
+    border-radius:12px;
+}
+
+.pipeline{
+    margin-top:30px;
+    padding:20px;
+
+    background:#f8fafc;
+    border-radius:12px;
+
+    font-weight:600;
+}
+
+.status-box{
+    margin-top:25px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.success{
+    color:green;
+}
+
+.processing{
+    color:#e67e22;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        Store Intelligence
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="upload.html">Upload CCTV</a>
+        <a href="http://127.0.0.1:8000/docs" target="_blank">
+            API Docs
+        </a>
+    </div>
+
+</nav>
+
+<div class="upload-container">
+
+    <div class="upload-card">
+
+        <h1>📹 Upload CCTV Video</h1>
+
+        <p>
+            Upload store surveillance footage to generate
+            customer tracking, heatmaps, journeys and analytics.
+        </p>
+
+        <div class="file-input">
+            <input
+                type="file"
+                id="videoFile"
+                accept="video/*"
+                onchange=""
+            >
+        </div>
+
+        
+
+        <div class="video-preview">
+
+            <video
+                id="preview"
+                controls
+                style="display:none;"
+            ></video>
+
+        </div>
+
+        <div class="pipeline">
+            Upload
+            →
+            Detection
+            →
+            Tracking
+            →
+            Analytics
+            →
+            Dashboard Update
+        </div>
+
+        <div
+            id="status"
+            class="status-box"
+        ></div>
+
+        <select id="cameraType">
+    <option value="entry">Entry Camera</option>
+    <option value="zone">Zone Camera</option>
+    <option value="billing">Billing Camera</option>
+</select>
+
+<button
+    type="button"
+    class="process-btn"
+    onclick="uploadVideo()"
+>
+    Process Video
+</button>
+
+    </div>
+
+</div>
+
+<script src="upload.js"></script>
+
+</body>
+</html>
