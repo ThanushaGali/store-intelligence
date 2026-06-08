@@ -226,23 +226,13 @@ The `assets/` directory contains sample screenshots and outputs generated during
 - Entry & Exit Detection
 - Zone Analytics
 - Dashboard Visualizations
-- Heatmap Outputs
+
 
 These resources are provided to help understand the system workflow and demonstrate the capabilities of the platform.
 
 ---
 
-### Disclaimer
----
 
-
-Due to data privacy, confidentiality, and ownership considerations, the original datasets, CCTV footage, store layouts, sales records, screenshots, and other supporting assets used during development are not included in this repository.
-
-The project may reference retail store scenarios and sample analytics workflows for demonstration purposes only. No proprietary business information, customer-identifiable data, or confidential retail data is distributed through this repository.
-
-The repository focuses on showcasing the system architecture, implementation, analytics pipeline, and technical capabilities of the solution.
-
----
 
 ## License
 
