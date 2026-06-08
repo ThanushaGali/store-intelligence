@@ -1,22 +1,31 @@
 # Store Intelligence System
 
+## AI-Powered Retail Analytics Platform
+
+Store Intelligence System is an AI-powered retail analytics platform that transforms CCTV footage and sales data into actionable business intelligence.
+
+The system leverages Computer Vision, Object Tracking, and Retail Analytics to automatically analyze customer movement inside stores and generate insights that help improve operational efficiency, customer engagement, and business performance.
+
+By combining YOLOv8-based detection with analytics pipelines, the platform provides visibility into customer behavior, store traffic, zone performance, conversion funnels, revenue metrics, and heatmap visualizations.
+
+---
+
 ## Overview
 
-Store Intelligence System is an AI-powered retail analytics platform that converts CCTV footage and sales data into actionable business insights.
+The platform processes store surveillance footage and transactional data to generate meaningful retail insights such as:
 
-The system performs:
+* Customer Detection & Tracking
+* Footfall Analysis
+* Entry & Exit Monitoring
+* Zone Analytics
+* Customer Journey Reconstruction
+* Heatmap Generation
+* Revenue Analytics
+* Conversion Funnel Analytics
+* KPI Generation
+* Anomaly Detection
 
-* Customer detection and tracking
-* Footfall counting
-* Entry/Exit event generation
-* Zone analytics
-* Customer journey analysis
-* Billing analytics
-* Conversion funnel generation
-* Revenue analytics
-* Heatmap generation
-* Anomaly detection
-* Interactive dashboard visualization
+The objective is to bridge the gap between physical retail operations and data-driven decision making through Artificial Intelligence.
 
 ---
 
@@ -26,277 +35,148 @@ The system performs:
 
 * YOLOv8-based person detection
 * Multi-object tracking
-* Entry and Exit detection
-* Zone visit tracking
+* Entry and exit event generation
+* Customer footfall counting
 * Customer journey reconstruction
+* Zone-wise visitor analytics
+* Heatmap generation
 
-### Business Analytics
+### Business Intelligence
 
-* Footfall analytics
-* Occupancy tracking
 * Revenue analytics
 * Revenue per visitor
 * Average bill value
-* Conversion rate
-* Top-performing brands
-* Most visited zones
+* Conversion rate analysis
+* Brand-wise performance tracking
+* KPI dashboard generation
+* Business anomaly detection
 
-### Visualization
+### Interactive Dashboard
 
-* KPI Dashboard
-* Revenue by Brand chart
-* Zone Analytics chart
-* Customer Journey viewer
-* Customer Funnel
-* Heatmap visualization
-* Anomaly alerts
-
-### API Services
-
-* FastAPI backend
-* REST endpoints
-* Health monitoring endpoint
-* JSON analytics responses
+* Store Summary
+* KPI Metrics
+* Revenue Analysis
+* Zone Analytics
+* Customer Journey Visualization
+* Conversion Funnel Analytics
+* Heatmap Visualization
+* Anomaly Reports
 
 ---
 
-# Project Structure
+## Technology Stack
 
-```text
-store-intelligence/
-│
-├── analytics/
-│   ├── entry_exit/
-│   ├── zones/
-│   ├── billing/
-│   ├── heatmap/
-│   ├── funnel/
-│   ├── anomalies/
-│   └── metrics/
-│
-├── backend/
-│   └── main.py
-│
-├── frontend/
-│   ├── index.html
-│   ├── app.js
-│   └── style.css
-│
-├── data/
-│   ├── Store 1/
-│   ├── Store 2/
-│   ├── layouts/
-│   ├── sales/
-│   └── output/
-│
-├── README.md
-├── DESIGN.md
-└── CHOICES.md
-```
+### Artificial Intelligence
+
+* YOLOv8
+* Computer Vision
+* Object Tracking
+
+### Backend
+
+* Python
+* FastAPI
+* Pandas
+* NumPy
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+
+### Data Processing
+
+* JSON
+* CSV
+
+### Containerization
+
+* Docker
+* Docker Compose
 
 ---
 
-# Architecture
+## System Architecture
 
 ```text
 Store CCTV Videos
-        |
-        v
+        │
+        ▼
 YOLOv8 Detection
-        |
-        v
+        │
+        ▼
 Object Tracking
-        |
-        v
+        │
+        ▼
 Event Generation
-        |
-        +------------------+
-        |                  |
-        v                  v
-Zone Analytics     Billing Analytics
-        |                  |
-        +--------+---------+
-                 |
-                 v
-         Analytics Engine
-                 |
-                 v
-           FastAPI Backend
-                 |
-                 v
-        Interactive Dashboard
+        │
+ ┌──────┼─────────┐
+ │      │         │
+ ▼      ▼         ▼
+Entry  Zones   Customer
+Exit Analytics Journey Analytics
+ │      │         │
+ └──────┼─────────┘
+        ▼
+ Analytics Engine
+        │
+        ▼
+ FastAPI Backend
+        │
+        ▼
+ Interactive Dashboard
 ```
 
 ---
 
-# Generated Outputs
-
-The system generates:
+## Project Structure
 
 ```text
-events.json
-events.jsonl
-zones.json
-billing.json
-customer_journey.json
-funnel.json
-kpis.json
-anomalies.json
-heat_points.json
-store_heatmap.jpg
+store-intelligence/
+
+├── analytics/
+├── backend/
+├── detection/
+├── frontend/
+├── data/
+├── README.md
+├── DESIGN.md
+├── CHOICES.md
+├── Dockerfile
+└── docker-compose.yml
 ```
 
 ---
 
-# API Endpoints
+## Quick Start
 
-### Health Check
-
-```http
-GET /health
-```
-
-### Store Summary
-
-```http
-GET /api/store-summary
-```
-
-### Revenue
-
-```http
-GET /api/revenue
-```
-
-### Revenue By Brand
-
-```http
-GET /api/revenue-by-brand
-```
-
-### Zone Analytics
-
-```http
-GET /api/zones
-```
-
-### Customer Journeys
-
-```http
-GET /api/customer-journeys
-```
-
-### KPIs
-
-```http
-GET /api/kpis
-```
-
-### Anomalies
-
-```http
-GET /api/anomalies
-```
-
-### Funnel Analytics
-
-```http
-GET /funnel
-```
-
----
-
-# Installation
-
-## Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-## Activate Environment
-
-Windows:
+### Activate Environment
 
 ```bash
 venv\Scripts\activate
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-# Running Analytics
-
-## Entry / Exit Analytics
-
-```bash
-python analytics/entry_exit/entry_exit_counter.py
-```
-
-## Zone Analytics
-
-```bash
-python analytics/zones/zone_tracker.py
-```
-
-## Billing Analytics
-
-```bash
-python analytics/billing/billing_counter.py
-```
-
-## Revenue Analytics
-
-```bash
-python analytics/revenue/revenue_tracker.py
-```
-
-## KPI Generation
-
-```bash
-python analytics/metrics/kpi_engine.py
-```
-
-## Funnel Generation
-
-```bash
-python analytics/funnel/funnel_generator.py
-```
-
-## Anomaly Detection
-
-```bash
-python analytics/anomalies/anomaly_detector.py
-```
-
-## Heatmap Generation
-
-```bash
-python analytics/heatmap/heatmap_generator.py store1
-```
-
----
-
-# Running Backend
+### Run Backend
 
 ```bash
 cd backend
-
 uvicorn main:app --reload
 ```
 
-Backend URL:
-
-```text
-http://127.0.0.1:8000
-```
-
-API Documentation:
+### Open Dashboard
 
 ```text
 http://127.0.0.1:8000/docs
@@ -304,69 +184,53 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# Running Frontend
+## Project Assets
 
-Open:
-
-```text
-frontend/index.html
-```
-
-or run:
-
-```bash
-python -m http.server 5500
-```
-
-Dashboard:
-
-```text
-http://127.0.0.1:5500/frontend/index.html
-```
+A project presentation (PPT) is included for understanding the system design, architecture, implementation approach, and analytics workflow.
 
 ---
 
-# Health Endpoint Example
+## Future Improvements
 
-```json
-{
-  "status": "healthy",
-  "service": "Store Intelligence API"
-}
-```
-
----
-
-# AI-Assisted Development
-
-AI tools were used for:
-
-* Architecture brainstorming
-* Analytics design discussions
-* API design suggestions
-* Dashboard improvements
-* Documentation drafting
-* Debugging assistance
-
-Implementation, integration, testing, and validation were performed manually.
-
----
-
-# Future Improvements
-
-* Staff exclusion
-* Re-identification models
 * Multi-camera tracking
-* Kafka streaming
-* PostgreSQL storage
+* Customer re-identification
+* Real-time analytics pipeline
+* PostgreSQL integration
 * ClickHouse analytics warehouse
-* Redis caching
-* WebSocket dashboard updates
+* Kafka streaming architecture
+* Redis caching layer
+* WebSocket-based live dashboard updates
+* Predictive customer analytics
+* AI-driven demand forecasting
 * Deep learning anomaly detection
+* Store layout optimization recommendations
 
 ---
 
-# Author
+## Disclaimer
 
-Thanusha Gali
+This project was developed for educational, research, and portfolio purposes.
 
+Due to data privacy, confidentiality, and ownership considerations, the original datasets, CCTV footage, store layouts, sales records, screenshots, and other supporting assets used during development are not included in this repository.
+
+The project may reference retail store scenarios and sample analytics workflows for demonstration purposes only. No proprietary business information, customer-identifiable data, or confidential retail data is distributed through this repository.
+
+The repository focuses on showcasing the system architecture, implementation, analytics pipeline, and technical capabilities of the solution.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for more information.
+
+---
+
+## Author
+
+**Thanusha Gali**
+
+B.Tech Computer Science Engineering
+
+Computer Vision • Artificial Intelligence • Data Analytics • Software Development
