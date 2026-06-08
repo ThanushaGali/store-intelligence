@@ -1,16 +1,20 @@
-venv/
-__pycache__/
-*.pyc
+# Challenge datasets
+data/layouts/
+data/sales/
 
-data/videos/
+# Generated outputs
+data/output/
+assets/
+
+# Videos
 *.mp4
 *.avi
 *.mov
 
-data/output/*.jpg
-data/output/*.png
+# YOLO model
+yolov8n.pt
 
-.idea/
-.vscode/
-
-.env
+# Python
+venv/
+__pycache__/
+*.pyc

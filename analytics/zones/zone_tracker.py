@@ -97,10 +97,18 @@ output = {
 print("\nFinal Zone Counts")
 print(output)
 
-with open("data/output/zones.json", "w") as f:
-    json.dump(output, f, indent=4)
+with open(
+    "data/output/zones.json",
+    "w"
+) as f:
 
-    with open(
+    json.dump(
+        output,
+        f,
+        indent=4
+    )
+
+with open(
     "data/output/heat_points.json",
     "w"
 ) as f:
