@@ -182,13 +182,6 @@ uvicorn main:app --reload
 http://127.0.0.1:8000/docs
 ```
 
----
-
-## Project Assets
-
-A project presentation (PPT) is included for understanding the system design, architecture, implementation approach, and analytics workflow.
-
----
 
 ## Future Improvements
 
@@ -237,7 +230,10 @@ The `assets/` directory contains sample screenshots and outputs generated during
 
 These resources are provided to help understand the system workflow and demonstrate the capabilities of the platform.
 
+---
+
 ### Disclaimer
+---
 
 
 Due to data privacy, confidentiality, and ownership considerations, the original datasets, CCTV footage, store layouts, sales records, screenshots, and other supporting assets used during development are not included in this repository.
