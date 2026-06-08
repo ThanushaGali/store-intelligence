@@ -13,6 +13,7 @@ assets/
 
 # YOLO model
 yolov8n.pt
+*.pt
 
 # Python
 venv/
