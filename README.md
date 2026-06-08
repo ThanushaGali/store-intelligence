@@ -205,11 +205,40 @@ A project presentation (PPT) is included for understanding the system design, ar
 * Deep learning anomaly detection
 * Store layout optimization recommendations
 
+
+
+
 ---
 
-## Disclaimer
 
-This project was developed for educational, research, and portfolio purposes.
+## Project Resources
+
+### Project Presentation
+
+A detailed project presentation is available in the `docs/` directory, covering:
+
+- Problem Statement
+- Solution Design
+- System Architecture
+- Analytics Pipeline
+- Implementation Approach
+- Key Features
+- Future Scope
+
+### Demonstration Assets
+
+The `assets/` directory contains sample screenshots and outputs generated during development and testing, including:
+
+- Customer Tracking
+- Entry & Exit Detection
+- Zone Analytics
+- Dashboard Visualizations
+- Heatmap Outputs
+
+These resources are provided to help understand the system workflow and demonstrate the capabilities of the platform.
+
+### Disclaimer
+
 
 Due to data privacy, confidentiality, and ownership considerations, the original datasets, CCTV footage, store layouts, sales records, screenshots, and other supporting assets used during development are not included in this repository.
 
@@ -231,6 +260,4 @@ See the LICENSE file for more information.
 
 **Thanusha Gali**
 
-B.Tech Computer Science Engineering
 
-Computer Vision • Artificial Intelligence • Data Analytics • Software Development
